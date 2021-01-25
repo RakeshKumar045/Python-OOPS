@@ -15,10 +15,14 @@ class Person(object):
 
 
 class Employee(Person):
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, name, id):
+        # self.name = name
         # invoking the __init__ of the parent class
-        Person.__init__(self, name)
+        # Person.__init__(self, name)
+
+        super().__init__(name)
+        self.id = id
+        pass
 
     def displayName(self):
         print("Employee Name is ", self.name)
